@@ -3,7 +3,7 @@ import pyowm
 from pyowm import OWM
 from pyowm.utils import config
 from pyowm.utils import timestamps
-owm = OWM('3ef0b621ba1d0ad74912abfb7b925184')# , language = "ru"
+owm = OWM('3ef0b621ba1d0ad74912abfb7b925184')# , language = "ru" ВОТ ТУТ И ЗАСТРЯЛА.
 mgr = owm.weather_manager()
 
 place = input("Where are you from?: ")
