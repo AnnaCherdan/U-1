@@ -3,9 +3,14 @@ import pyowm
 from pyowm import OWM
 from pyowm.utils import config
 from pyowm.utils import timestamps
+from pyowm.utils.config import get_default_config
+
 import telebot
 
-owm = OWM('3ef0b621ba1d0ad74912abfb7b925184')# , language = "ru"
+config_dict = get_default_config()
+config_dict['language'] = 'ru'
+
+owm = OWM('3ef0b621ba1d0ad74912abfb7b925184', config_dict)
 mgr = owm.weather_manager()
 
 bot = telebot.TeleBot("5244368482:AAFAbWJltAxQMZJzAHjRS77KvOl7tGH6iL4")
